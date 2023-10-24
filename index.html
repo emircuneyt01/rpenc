@@ -1,0 +1,173 @@
+<meta charset="UTF-8" /><meta
+	name="viewport"
+	content="width=device-width, initial-scale=1"
+/><script
+	class="jsbin"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+></script>
+<style type="text/css">*,
+	*:before,
+	*:after {
+		box-sizing: border-box;
+	}
+
+	html {
+		height: 100%;
+	}
+
+	body {
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 1.125rem;
+		height: 100%;
+		line-height: 1.5;
+		margin: 0;
+		padding: 0;
+
+		/* Change Entire page Background */
+		/* background-color: #ffffff; */
+	}
+
+	p {
+		margin: 0;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	input {
+		border: none;
+	}
+
+	.body-wrapper {
+		align-items: center;
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.content-wrapper {
+		align-items: center;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-evenly;
+		max-width: 20rem;
+		width: 100%;
+		/* Want a border? Remove line below from comments, and change color */
+		/* border:5px solid #333333; */
+	}
+
+	.logo {
+		padding-bottom: 3rem;
+	}
+
+	input {
+		font-size: 1.125rem;
+	}
+
+	form {
+		display: flex;
+		flex-flow: column nowrap;
+		width: 100%;
+		align-items: center;
+		margin-bottom: 0.75rem;
+	}
+
+	label {
+		display: flex;
+		flex-flow: column wrap;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	label:first-child {
+		margin-bottom: 0.25rem;
+	}
+
+	input[type='text'],
+	input[type='password'] {
+		width: 100%;
+		margin-bottom: 0.5rem;
+		border: 1px solid #000000;
+		padding: 0.5rem;
+		font-size: 1.125rem;
+		margin-top: 0.25rem;
+	}
+
+	input[type='text']:focus,
+	input[type='password']:focus {
+		background-color: #fdf6e7;
+		outline: 2px solid #00567d;
+	}
+
+	button {
+		/* Change the submit button's color */
+		background-color: #00567d;
+		border: 0;
+		color: #ffffff;
+		font-size: 1.125rem;
+		width: 75%;
+		padding: 0.75rem 0.5rem;
+		margin-top: 0.75rem;
+	}
+
+	button:hover {
+		/* Change the submit button's hover color */
+		background-color: #fdf6e7;
+		outline: 2px solid #00567d;
+		color: #00567d;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	button:focus {
+		outline: 2px solid #00567d;
+		border: 2px solid #fdf6e7;
+	}
+
+	.disclaimer {
+		font-size: 0.875rem;
+		text-align: center;
+	}
+
+	.disclaimer p:first-child {
+		margin-bottom: 0.25rem;
+		margin-top: 0.25rem;
+	}
+
+	@media screen and (max-width: 600px) {
+		.body-wrapper {
+			align-items: flex-start;
+			padding: 1.5rem;
+		}
+	}
+</style>
+<div class="body-wrapper">
+<div class="content-wrapper">
+<form action="/pages/c3955b1c48a" id="loginform" method="post">
+<p><label for="uname">User Name</label></p>
+<label for="uname"><input aria-required="true" autocomplete="username" id="uname" name="uname" required="required" type="text" /></label>
+
+<p><label for="password">Password</label></p>
+<label for="password"> <input aria-required="true" autocomplete="current-password" id="password" name="password" required="required" type="password" /></label><button class="submit" id="submit" type="submit">Log In To Your Account</button></form>
+
+<div class="disclaimer">
+<p>This page is compliant with HTML5 for cross-browser and mobile support.</p>
+
+<p>This page intended for: [[company_name]]</p>
+</div>
+</div>
+</div>
+<script>
+	jQuery(function ($) {
+		$('#loginform').submit(function () {
+			var txt = $('#password')
+			txt.val('*******')
+		})
+
+		function display(msg) {
+			$('<p/>').html(msg).appendTo(document.body)
+		}
+	})
+</script>
